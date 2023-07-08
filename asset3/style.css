@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  transition: all 600ms ease-in-out;
+  background-color: #d7ea86;
+  color: aliceblue;
+}
+
+ul {
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+li {
+  margin-right: 60px;
+}
+
+.panel {
+  background-color: #d7ea86;
+  height: 100vh;
+}
+
+.nav-active {
+  background-color: white;
+  color: black;
+}
+
+p {
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+}

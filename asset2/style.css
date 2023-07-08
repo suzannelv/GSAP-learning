@@ -1,0 +1,14 @@
+/* -------------timeline.html------------ */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #2b41b0;
+}
+.panel {
+  height: 100vh;
+  background-color: #eacbcb;
+}
+
+.box-red {
+  background-color: red;
+}

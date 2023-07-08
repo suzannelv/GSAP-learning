@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      main {
+        max-width: 35%;
+        margin: 80px auto;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+      }
+
+      span {
+        background-image: linear-gradient(yellow rgb(42, 170, 136));
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 1s ease-in;
+      }
+      .active {
+        background-size: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>HighLighter</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore <span>aperiam aliquid fugiat beatae unde,</span> repellat
+        voluptatem recusandae et, officia quisquam iusto cum distinctio, dolore
+        id doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore aperiam aliquid fugiat beatae unde, repellat voluptatem
+        recusandae et, officia quisquam iusto cum distinctio, dolore id
+        doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore <span>aperiam aliquid fugiat beatae unde, </span>repellat
+        voluptatem recusandae et, officia quisquam iusto cum distinctio, dolore
+        id doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore aperiam aliquid fugiat beatae unde, repellat voluptatem
+        recusandae et, officia quisquam iusto cum distinctio, dolore id
+        doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore aperiam
+        <span
+          >aliquid fugiat beatae unde, repellat voluptatem recusandae et,
+          officia quisquam iusto cum distinctio,</span
+        >
+        dolore id doloremque. Asperiores, labore!
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore
+        <span>aperiam aliquid fugiat beatae unde, repellat voluptatem</span>
+        recusandae et, officia quisquam iusto cum distinctio, dolore id
+        doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore aperiam aliquid fugiat beatae unde, repellat voluptatem
+        recusandae et, officia quisquam iusto cum distinctio, dolore id
+        doloremque. Asperiores, labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam
+        tempore aperiam aliquid fugiat beatae unde, repellat voluptatem
+        recusandae et, officia quisquam iusto cum distinctio, dolore id
+        doloremque. Asperiores, labore!
+      </p>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray("span").forEach((span) => {
+        ScrollTrigger.create({
+          trigger: span,
+          start: "top center",
+          // toggleClass: "active",
+          onEnter: () => span.classList.add("active"),
+          markers: true,
+        });
+      });
+    </script>
+  </body>
+</html>
